@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rishab Mandyam's personal site: neuroscience, research, dance, and notes." />
+    <meta name="theme-color" content="#101813" />
+    <title>Rishab.exe | Personal archive</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="ucsf-research.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#desktop">Skip intro and go to the desktop</a>
+    <section class="boot" id="boot" role="dialog" aria-modal="true" aria-label="Computer startup screen">
+      <div class="boot-frame">
+        <p class="boot-brand">RISHAB.SYS</p>
+        <p class="boot-version">PERSONAL ARCHIVE / BUILDING CURIOSITY</p>
+        <div class="boot-lines" aria-live="polite">
+          <p><span>[OK]</span> visual cortex .................... online</p>
+          <p><span>[OK]</span> research memory .................. loaded</p>
+          <p><span>[OK]</span> rhythm.engine ..................... ready</p>
+          <p><span>[..]</span> mounting interests ................. 04</p>
+        </div>
+        <div class="boot-meter" aria-hidden="true"><span></span></div>
+        <button class="boot-enter" id="enter-site" type="button">[ ENTER ]</button>
+      </div>
+    </section>
+
+    <main class="desktop" id="desktop" aria-label="Rishab's personal desktop" tabindex="-1" inert>
+      <header class="menu-bar">
+        <a class="system-mark" href="#desktop" aria-label="Rishab system home">R.</a>
+        <nav class="menu-links" aria-label="Main menu">
+          <button type="button" data-open="profile">[ ABOUT ]</button>
+          <button type="button" data-open="research">[ RESEARCH ]</button>
+          <button type="button" data-open="dance">[ LIFE ]</button>
+          <button type="button" data-open="journal">[ JOURNAL ]</button>
+        </nav>
+        <div class="system-status"><span class="status-signal" aria-hidden="true"></span><span>RICE / HOUSTON</span></div>
+        <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause animation">[ MOTION: ON ]</button>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme">[ LIGHT ]</button>
+      </header>
+
+      <section class="screen" aria-labelledby="hero-title">
+        <div class="screen-grid" aria-hidden="true"></div>
+        <div class="screen-noise" aria-hidden="true"></div>
+
+        <button class="space space-research" type="button" data-open="research">
+          <span class="space-number">01</span><span class="space-file">research.log</span><span class="space-name">Research</span>
+        </button>
+        <button class="space space-dance" type="button" data-open="dance">
+          <span class="space-number">02</span><span class="space-file">rhythm.exe</span><span class="space-name">Dance &amp; life</span>
+        </button>
+        <button class="space space-profile" type="button" data-open="profile">
+          <span class="space-number">03</span><span class="space-file">rishab.sys</span><span class="space-name">Profile</span>
+        </button>
+        <button class="space space-journal" type="button" data-open="journal">
+          <span class="space-number">04</span><span class="space-file">notes.md</span><span class="space-name">Journal</span>
+        </button>
+
+        <div class="hero-core">
+          <p class="hero-kicker"><span class="cursor-dot" aria-hidden="true"></span> COMPUTATIONAL NEUROSCIENCE / RICE UNIVERSITY</p>
+          <figure class="signal-art" aria-hidden="true">
+            <canvas id="signal-canvas"></canvas>
+          </figure>
+          <h1 id="hero-title">Rishab<br /><span>Mandyam</span></h1>
+          <p class="hero-caption">STUDYING HOW THE BRAIN SEES, LEARNS, AND CHANGES</p>
+          <button class="open-prompt" type="button" data-open="profile">[ OPEN PROFILE ] <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <div class="screen-footnote"><span>MOVE THROUGH THE ARCHIVE</span><span>CLICK A SPACE OR PRESS 1 - 4</span></div>
+      </section>
+
+      <footer class="dock">
+        <span>RISHAB.EXE</span><span class="dock-divider"></span><span>COMPUTATIONAL NEUROSCIENCE + DATA SCIENCE</span><span class="dock-right">PERSONAL BUILD / ALWAYS IN PROGRESS</span>
+      </footer>
+    </main>
+
+    <dialog class="app-window" id="app-window" aria-labelledby="window-title">
+      <div class="window-topbar">
+        <div class="window-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="window-path" id="window-path">/archive</span>
+        <button class="window-close" type="button" aria-label="Close window">[ ESC ]</button>
+      </div>
+      <div class="window-content" id="window-content"></div>
+    </dialog>
+
+    <template id="profile-template">
+      <section class="app-page profile-page">
+        <p class="eyebrow">rishab.sys / profile</p>
+        <h2 id="window-title">A curious mind, in several directions.</h2>
+        <div class="profile-copy">
+          <p class="lead">I’m Rishab Mandyam, a student at Rice University studying computational neuroscience with a minor in data science.</p>
+          <p>I’m drawn to the brain’s capacity to change, the mechanics of vision, and the question of how experience becomes biology. Research gives me one way to follow those questions. Dance, music, and movement give me another.</p>
+        </div>
+        <div class="profile-facts">
+          <div><span>STUDYING</span><strong>Computational neuroscience</strong></div>
+          <div><span>ALSO</span><strong>Data science minor</strong></div>
+          <div><span>RETURNING QUESTIONS</span><strong>Vision · neural plasticity · the brain</strong></div>
+          <div><span>OFF-SCREEN</span><strong>Dance · guitar · climbing · running</strong></div>
+        </div>
+        <p class="app-footnote">A fuller story is still taking shape. This page can grow with you.</p>
+      </section>
+    </template>
+
+    <template id="research-template">
+      <section class="app-page research-page">
+        <div class="research-heading">
+          <div>
+            <p class="eyebrow">research.log / selected work</p>
+            <h2 id="window-title">Questions that keep me looking.</h2>
+          </div>
+          <p class="lead">Three research experiences, each opening onto a different question.</p>
+        </div>
+        <div class="research-showcase">
+            <div class="research-tabs" role="tablist" aria-label="Research projects" aria-orientation="horizontal">
+            <button class="project-tab is-selected" id="research-tab-ucsf" type="button" role="tab" aria-selected="true" aria-controls="research-panel" tabindex="0" data-project-index="0">
+              <span class="project-tab-index">01</span><span><small>UCSF</small><strong>Glaucoma prediction</strong></span><span class="project-tab-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="project-tab" id="research-tab-bcm" type="button" role="tab" aria-selected="false" aria-controls="research-panel" tabindex="-1" data-project-index="1">
+              <span class="project-tab-index">02</span><span><small>Baylor College of Medicine</small><strong>Early screening</strong></span><span class="project-tab-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="project-tab" id="research-tab-harvard" type="button" role="tab" aria-selected="false" aria-controls="research-panel" tabindex="-1" data-project-index="2">
+              <span class="project-tab-index">03</span><span><small>Harvard</small><strong>Stem cell research</strong></span><span class="project-tab-arrow" aria-hidden="true">↗</span>
+            </button>
+            <p class="research-key-hint">USE ← → TO MOVE BETWEEN PROJECTS</p>
+          </div>
+          <article class="research-slide" id="research-panel" role="tabpanel" aria-labelledby="research-tab-ucsf" tabindex="0" aria-live="polite">
+            <div class="research-slide-top"><span id="research-position">01 / 03</span><span>RESEARCH EXPERIENCE</span></div>
+            <div class="research-story" id="research-story"></div>
+            <div class="research-stepper">
+              <button class="research-step" type="button" data-project-step="-1" aria-label="Previous research project">← PREVIOUS</button>
+              <div class="research-progress" aria-hidden="true"><span id="research-progress-fill"></span></div>
+              <button class="research-step" type="button" data-project-step="1" aria-label="Next research project">NEXT →</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </template>
+
+    <template id="dance-template">
+      <section class="app-page dance-page">
+        <p class="eyebrow">rhythm.exe / life outside the lab</p>
+        <h2 id="window-title">A different kind of practice.</h2>
+        <div class="dance-layout">
+          <div class="dance-poster" aria-hidden="true"><span>RHYTHM</span><div class="poster-ring ring-one"></div><div class="poster-ring ring-two"></div><div class="poster-dot"></div></div>
+          <div class="dance-copy">
+            <p class="lead">Dance takes up real space in my life.</p>
+            <p>I lead Rice’s Bollywood Fusion dance team and post dances I’m learning on TikTok. I love the discipline of rehearsal and the joy of performing together.</p>
+            <p>Outside dance, I play guitar, rock climb, run, and work out. Being active helps me feel awake to the day.</p>
+            <div class="social-placeholder">TIKTOK <span>add your profile link</span></div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="journal-template">
+      <section class="app-page journal-page">
+        <p class="eyebrow">notes.md / a small journal</p>
+        <h2 id="window-title">Ideas I want to stay with.</h2>
+        <p class="lead">A reading list for unfinished thoughts, research questions, and things learned away from a screen.</p>
+        <div class="journal-layout">
+          <div class="journal-index" aria-label="Journal entries">
+            <button class="journal-item selected" type="button" data-article="plasticity">
+              <span class="journal-topic">NEURAL PLASTICITY / DRAFT IDEA</span><strong>What does it mean for a brain to change?</strong><span class="journal-meta">A question I keep returning to</span>
+            </button>
+            <button class="journal-item" type="button" data-article="dance">
+              <span class="journal-topic">DANCE / DRAFT IDEA</span><strong>Learning a movement by heart</strong><span class="journal-meta">On practice, attention, and rhythm</span>
+            </button>
+          </div>
+          <article class="journal-reader" aria-live="polite">
+            <p class="reader-label" id="reader-label">DRAFT IDEA / NEURAL PLASTICITY</p>
+            <h3 id="reader-title">What does it mean for a brain to change?</h3>
+            <div class="reader-body" id="reader-body"><p>I keep coming back to the word “plasticity.” It suggests that experience leaves a mark, but the interesting part is how that mark is made. What changes when we learn to see something differently? Where does practice end and biology begin?</p><p>This is a starting point for a longer note about the questions behind my interest in computational neuroscience.</p></div>
+            <span class="draft-note">SAMPLE DRAFT / TO BE REWRITTEN IN YOUR VOICE</span>
+          </article>
+        </div>
+      </section>
+    </template>
+  </dialog>
+  <script src="ucsf-research.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
